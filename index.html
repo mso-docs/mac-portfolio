@@ -1,353 +1,329 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mackenzie — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mackenzie O&rsquo;Brien | AI safety researcher and builder, Mac Labs AI</title>
+<meta name="description" content="Portfolio of Mackenzie O&rsquo;Brien, AI safety researcher and builder at Mac Labs AI. Flagship MCP tools; research on unlearning, interpretability, and world models (JEPA-style); and every hackathon project in one place.">
+<meta name="author" content="Mackenzie O'Brien">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15130f" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://mso-docs.github.io/mac-portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mac Labs AI">
+<meta property="og:title" content="Mackenzie O&rsquo;Brien | AI safety researcher and builder">
+<meta property="og:description" content="Flagship MCP tools; research on unlearning, interpretability, and world models (JEPA-style); and every hackathon project in one place.">
+<meta property="og:url" content="https://mso-docs.github.io/mac-portfolio/">
+<meta property="og:image" content="https://mso-docs.github.io/mac-portfolio/assets/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mackenzie O'Brien, AI safety researcher and builder at Mac Labs AI, on a warm paper background with a botanical sprig.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script>
+/* Set the theme before first paint so there is no flash. Saved choice wins, then the system setting. */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("theme"); } catch (e) {}
+  if (t !== "light" && t !== "dark") {
+    t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  var r = document.documentElement;
+  r.setAttribute("data-theme", t);
+  r.classList.add("js");
+})();
+</script>
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 <IP> 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+  <symbol id="i-hf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.4 2.1 2 3.5 2s2.5-.6 3.5-2"/><path d="M9 9.5h.01M15 9.5h.01" stroke-width="2.4"/></g></symbol>
+  <symbol id="i-lounge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3"/><path d="M3 11h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M6 18v2M18 18v2"/></g></symbol>
+  <symbol id="i-glama" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01" stroke-width="2.4"/></g></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.9 5.6 3.9 9s-1.3 6.4-3.9 9c-2.6-2.6-3.9-5.6-3.9-9S9.4 5.6 12 3z"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="currentColor"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></g></symbol>
+  <symbol id="i-data" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></g></symbol>
+  <symbol id="i-model" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h8M7 8l4 8M17 8l-4 8"/></g></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></g></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></g></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.6v.01M12 16v-5.5M12 13c0-1.7 1-2.6 2.3-2.6S16.5 11.3 16.5 13V16"/></g></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9M12 12 6 6M12 12l6-6M12 12V3M12 12 5 12M12 12l7 0"/></g></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></g></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></g></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></g></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5a4 4 0 0 0-5 5L4 17l3 3 5.5-5.5a4 4 0 0 0 5-5L15 12l-3-3z"/></g></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.5 9.5A1.5 1.5 0 0 0 5.8 21h12.4a1.5 1.5 0 0 0 1.3-2.5L14 9V3"/><path d="M7.5 15h9"/></g></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3M12 14v4M8 21h8M9.5 18h5"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></g></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></g></symbol>
+</svg>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">mso-docs</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Primary">
+    <a class="wordmark" href="#top" aria-label="Mac Labs AI, back to top">Mac Labs AI</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">
+      <svg class="ic ic-open" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="ic ic-close" aria-hidden="true"><use href="#i-x"/></svg>
+      <span class="sr-only">Menu</span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#flagship">Flagship</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#hackathons">Hackathons</a></li>
+      <li><a href="hackathons/">All hackathons</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://github.com/mso-docs" rel="noopener">GitHub</a></li>
+      <li><a href="https://huggingface.co/mackenzietechdocs" rel="noopener">Hugging Face</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
+      <svg class="ic ic-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      <svg class="ic ic-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    </button>
   </nav>
+</header>
 
-  <!-- HERO -->
-  <section class="hero" id="about">
-    <div class="hero-bg">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
+<main id="main">
+<section class="hero wrap" id="top" aria-labelledby="h-hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Mac Labs AI</p>
+    <h1 id="h-hero">Mackenzie O&rsquo;Brien</h1>
+    <p class="lede">AI safety researcher and builder at Mac Labs AI. Interpretability, unlearning, world models (JEPA-style), and tools that make documentation answerable.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#flagship">See flagship tools</a>
+      <a class="btn btn-ghost" href="#research">Read the research</a>
     </div>
-    <div class="hero-content">
-      <span class="hero-tag">Available for opportunities</span>
-      <h1 class="hero-title">
-        Hi, I'm <span class="gradient-text">Mackenzie</span>
-      </h1>
-      <p class="hero-subtitle">
-        I build AI-powered tools, browser extensions, and developer utilities —
-        with a focus on local-first AI, documentation tooling, and useful software.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="https://github.com/mso-docs" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-          GitHub
-        </a>
+    <ul class="stats" id="stats" aria-label="Portfolio at a glance">
+      <li class="stat"><svg class="ic" aria-hidden="true"><use href="#i-tools"/></svg><span class="stat-text"><strong data-stat="flagship">2</strong><span>Flagship MCP tools</span></span></li>
+      <li class="stat"><svg class="ic" aria-hidden="true"><use href="#i-flask"/></svg><span class="stat-text"><strong data-stat="research">2</strong><span>Research papers</span></span></li>
+      <li class="stat"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span class="stat-text"><strong data-stat="hackathons">17</strong><span>Hackathon projects</span></span></li>
+      <li class="stat"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span class="stat-text"><strong data-stat="since">Aug 2025</strong><span>First hackathon</span></span></li>
+    </ul>
+  </div>
+  <div class="hero-art" aria-hidden="true"><svg class="sprig" viewBox="0 0 330 420" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M210 400 C230 250 90 180 120 20" /><path d="M210.9 349.2 Q243.0 343.3 256.7 313.6 Q224.5 319.5 210.9 349.2Z" /><path d="M210.9 349.2 L253.0 316.4" opacity=".5" /><path d="M210.9 349.2 Q191.5 322.8 158.8 323.6 Q178.2 349.9 210.9 349.2Z" /><path d="M210.9 349.2 L163.0 325.6" opacity=".5" /><path d="M206.7 323.5 Q236.5 314.3 246.1 284.6 Q216.3 293.7 206.7 323.5Z" /><path d="M206.7 323.5 L243.0 287.7" opacity=".5" /><path d="M206.7 323.5 Q185.3 300.7 154.4 305.0 Q175.8 327.8 206.7 323.5Z" /><path d="M206.7 323.5 L158.6 306.5" opacity=".5" /><path d="M199.9 299.0 Q227.3 287.5 233.6 258.4 Q206.2 269.9 199.9 299.0Z" /><path d="M199.9 299.0 L230.9 261.7" opacity=".5" /><path d="M199.9 299.0 Q177.5 279.4 148.6 286.5 Q171.0 306.1 199.9 299.0Z" /><path d="M199.9 299.0 L152.7 287.5" opacity=".5" /><path d="M191.1 275.5 Q216.3 262.6 220.2 234.6 Q195.0 247.5 191.1 275.5Z" /><path d="M191.1 275.5 L217.8 237.9" opacity=".5" /><path d="M191.1 275.5 Q168.4 258.6 141.6 267.4 Q164.2 284.3 191.1 275.5Z" /><path d="M191.1 275.5 L145.5 268.0" opacity=".5" /><path d="M180.8 252.8 Q204.1 239.3 206.4 212.6 Q183.2 226.0 180.8 252.8Z" /><path d="M180.8 252.8 L204.4 215.8" opacity=".5" /><path d="M180.8 252.8 Q158.6 237.8 133.5 247.4 Q155.8 262.4 180.8 252.8Z" /><path d="M180.8 252.8 L137.3 247.8" opacity=".5" /><path d="M169.7 230.3 Q191.4 217.1 192.9 191.8 Q171.3 205.0 169.7 230.3Z" /><path d="M169.7 230.3 L191.1 194.9" opacity=".5" /><path d="M169.7 230.3 Q148.4 216.7 124.9 226.4 Q146.3 240.0 169.7 230.3Z" /><path d="M169.7 230.3 L128.5 226.7" opacity=".5" /><path d="M158.3 208.0 Q178.7 195.6 180.2 171.7 Q159.8 184.2 158.3 208.0Z" /><path d="M158.3 208.0 L178.5 174.6" opacity=".5" /><path d="M158.3 208.0 Q138.2 195.2 116.1 204.3 Q136.2 217.1 158.3 208.0Z" /><path d="M158.3 208.0 L119.5 204.6" opacity=".5" /><path d="M147.2 185.5 Q166.6 174.3 168.7 152.0 Q149.2 163.2 147.2 185.5Z" /><path d="M147.2 185.5 L166.9 154.7" opacity=".5" /><path d="M147.2 185.5 Q128.6 172.9 107.7 180.9 Q126.3 193.5 147.2 185.5Z" /><path d="M147.2 185.5 L110.8 181.3" opacity=".5" /><path d="M136.9 162.5 Q155.6 153.0 158.6 132.2 Q139.9 141.7 136.9 162.5Z" /><path d="M136.9 162.5 L156.8 134.6" opacity=".5" /><path d="M136.9 162.5 Q120.2 149.9 100.3 156.3 Q117.0 168.9 136.9 162.5Z" /><path d="M136.9 162.5 L103.2 156.8" opacity=".5" /><path d="M128.1 138.7 Q146.1 131.2 150.3 112.1 Q132.3 119.6 128.1 138.7Z" /><path d="M128.1 138.7 L148.5 114.2" opacity=".5" /><path d="M128.1 138.7 Q113.5 125.8 94.5 130.3 Q109.1 143.2 128.1 138.7Z" /><path d="M128.1 138.7 L97.2 131.0" opacity=".5" /><path d="M121.2 113.7 Q138.5 108.5 144.1 91.3 Q126.8 96.6 121.2 113.7Z" /><path d="M121.2 113.7 L142.2 93.1" opacity=".5" /><path d="M121.2 113.7 Q108.9 100.6 91.1 103.1 Q103.4 116.2 121.2 113.7Z" /><path d="M121.2 113.7 L93.5 103.9" opacity=".5" /><path d="M117.0 87.4 Q133.3 84.4 140.2 69.4 Q123.9 72.4 117.0 87.4Z" /><path d="M117.0 87.4 L138.3 70.8" opacity=".5" /><path d="M117.0 87.4 Q107.1 74.1 90.6 74.5 Q100.4 87.8 117.0 87.4Z" /><path d="M117.0 87.4 L92.7 75.5" opacity=".5" /><path d="M115.8 59.5 Q130.9 58.6 138.9 45.8 Q123.8 46.6 115.8 59.5Z" /><path d="M115.8 59.5 L137.0 46.8" opacity=".5" /><path d="M115.8 59.5 Q108.4 46.3 93.4 44.8 Q100.8 57.9 115.8 59.5Z" /><path d="M115.8 59.5 L95.2 45.9" opacity=".5" /><path d="M120.0 20.0 Q110.0 -10.0 124.0 -32.0 Q140.0 -8.0 120.0 20.0Z" /></svg></div>
+</section>
+
+<section class="section wrap" id="flagship" aria-labelledby="h-flagship">
+  <header class="section-head">
+    <p class="kicker">Flagship</p>
+    <h2 id="h-flagship">Flagship MCP tools</h2>
+    <p class="section-sub">Documentation assistants that speak the Model Context Protocol, so any MCP client can ask questions across your docs.</p>
+  </header>
+  <div class="flagship-grid">
+    <article class="card flagship-card" data-flagship>
+      <img class="shot" src="assets/img/flagship-docsnavigator.jpg" width="960" height="480" loading="lazy" alt="Screenshot of the DocsNavigator MCP Space: a purple header reading Docs Navigator MCP and tabs for Chat, Analysis, Stats, and Settings.">
+      <div class="card-body">
+        <h3>DocsNavigator MCP</h3>
+        <p class="tagline">Ask questions across your docs from any MCP client.</p>
+        <p>An MCP server with a Gradio app that answers questions over your documentation files. It combines full-text search, Claude, and OCR for scanned PDFs and images.</p>
+        <p class="origin">My original project, built because I needed to navigate docs. It became the basis for the SUSE Edition I built for SUSE Hack Week 25.</p>
+        <ul class="links" aria-label="DocsNavigator MCP links">
+          <li><a class="pill pill-primary" href="https://huggingface.co/spaces/mackenzietechdocs/DocsNavigatorMCP" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-hf"/></svg>Hugging Face Space</a></li>
+          <li><a class="pill" href="https://ai.lounge.ai/@mackenzietechdocs/hf-docsnavigatormcp" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-lounge"/></svg>AI Lounge</a></li>
+          <li><a class="pill" href="https://github.com/mso-docs/Docs-Navigator" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+        </ul>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">10+</span>
-          <span class="stat-label">Projects</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">5</span>
-          <span class="stat-label">Languages</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">AI</span>
-          <span class="stat-label">Focused</span>
-        </div>
+    </article>
+    <article class="card flagship-card suse" data-flagship>
+      <img class="shot" src="assets/img/flagship-suse.jpg" width="960" height="480" loading="lazy" alt="Screenshot of the SUSE Docs Navigator UI demo: a green header with a gecko, a search box, and tabs for Search, Ask Question, Summarize, and Sources.">
+      <div class="card-body">
+        <h3>Docs Navigator MCP: <span class="edition">SUSE Edition</span></h3>
+        <p class="tagline"><span class="tag tag-event">Built for SUSE Hack Week 25</span></p>
+        <p>Search, summarize, and ask questions across SUSE, Rancher, K3s, RKE2, Longhorn, Harvester, NeuVector, and Kubewarden docs using local open-source models. It also runs as an MCP server for Claude Desktop.</p>
+        <ul class="links" aria-label="SUSE Edition links">
+          <li><a class="pill pill-primary" href="https://glama.ai/mcp/servers/mso-docs/Docs-Navigator-MCP-SUSE-Edition" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-glama"/></svg>Glama</a></li>
+          <li><a class="pill" href="https://github.com/mso-docs/Docs-Navigator-MCP-SUSE-Edition" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+          <li><a class="pill" href="https://mso-docs.github.io/Docs-Navigator-MCP-SUSE-Edition/" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Live UI demo</a></li>
+        </ul>
+        <p class="fine">An independent project, not an official SUSE product.</p>
       </div>
+    </article>
+  </div>
+</section>
+
+<section class="section wrap" id="research" aria-labelledby="h-research">
+  <header class="section-head">
+    <p class="kicker">Research</p>
+    <h2 id="h-research">Research</h2>
+    <p class="section-sub">Two completed sprint papers on what models know, what they suppress, and what they act on, plus a SPAR Fall 2026 project and JEPA-style world models research, both in progress. Code, data, and models for the completed papers are public.</p>
+  </header>
+  <div class="research-list">
+    <article class="card research-row" data-research>
+      <img class="thumb" src="assets/img/research-lexsi.jpg" width="960" height="504" loading="lazy" alt="Cover art for the Lexsi project: Unlearning vs. Hiding, with a pale ghost figure inside a network of nodes.">
+      <div class="card-body">
+        <p class="tag-row"><span class="tag tag-event">Lexsi AI Safety &amp; Alignment Hackathon, Track 2b</span></p>
+        <h3>Lexsi: Unlearning vs. Hiding in Tiny Aya</h3>
+        <p>An audit of Representation Misdirection for Unlearning (RMU) on Tiny Aya (3.35B). RMU suppresses the injected facts at the output, but this audit does not claim erasure.</p>
+        <ul class="links" aria-label="Lexsi links">
+          <li><a class="pill pill-primary" href="https://mso-docs.github.io/Lexsi-Unlearning/" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Paper and site</a></li>
+          <li><a class="pill" href="https://youtu.be/BuCfLNA-gfc" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>Video</a></li>
+          <li><a class="pill" href="https://github.com/mso-docs/Lexsi-Unlearning" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>Code</a></li>
+          <li><a class="pill" href="https://huggingface.co/spaces/mackenzietechdocs/lexsi-unlearning-demo" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-hf"/></svg>Space</a></li>
+          <li><a class="pill" href="https://huggingface.co/collections/mackenzietechdocs/lexsi-unlearning-vs-hiding-6af7ae6b51c779a9e34418c6" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-model"/></svg>Models</a></li>
+          <li><a class="pill" href="https://huggingface.co/datasets/mackenzietechdocs/lexsi-unlearning-eval" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-data"/></svg>Dataset</a></li>
+          <li><a class="pill" href="https://huggingface.co/collections/mackenzietechdocs/lexsi-unlearning-vs-hiding-datasets-6afa5b350a621b28fe307358" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>Dataset collection</a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="card research-row" data-research>
+      <img class="thumb" src="assets/img/research-apart.jpg" width="960" height="504" loading="lazy" alt="Cover art for the Apart project: A Linear Answerability Signal That the Model Does Not Act On, with a line chart on a dark background.">
+      <div class="card-body">
+        <p class="tag-row"><span class="tag tag-event">Apart AI x Epistemics sprint participant</span></p>
+        <h3>A Linear Answerability Signal That the Model Does Not Act On</h3>
+        <p>A linear probe finds a signal for answerability in Phi-3.5-mini&rsquo;s hidden states, yet the model&rsquo;s output does not follow it. Probe AUROC reaches 0.906 on SQuAD 2.0.</p>
+        <ul class="links" aria-label="Apart project links">
+          <li><a class="pill pill-primary" href="https://mso-docs.github.io/Apart-Epistemics/" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Paper and site</a></li>
+          <li><a class="pill" href="https://youtu.be/og3AKyBByQw" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>Video</a></li>
+          <li><a class="pill" href="https://github.com/mso-docs/Apart-Epistemics" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>Code</a></li>
+          <li><a class="pill" href="https://huggingface.co/datasets/mackenzietechdocs/apart-epistemics-phi35-abstention" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-data"/></svg>Dataset</a></li>
+          <li><a class="pill" href="https://apartresearch.com/sprints/projects/a-linear-answerability-signal-that-the-model-does-not-act-on-feuho1zptz" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>Sprint page</a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="card research-row is-progress" id="spar">
+      <div class="thumb thumb-placeholder" aria-hidden="true">
+        <span class="art-kicker">In progress</span>
+        <span class="art-title">Moral Shadowbanning</span>
+      </div>
+      <div class="card-body">
+        <p class="tag-row"><span class="tag tag-status">In progress</span> <span class="tag tag-event">SPAR Fall 2026, research participant</span></p>
+        <h3>Moral Shadowbanning: Is Conversational AI Less Helpful, Honest, or Harmless to Users Deemed to Have Poor Moral Character?</h3>
+        <p>This project investigates whether LLMs undergo persona selection based on a user&rsquo;s inferred moral character, conditionally degrading their alignment across three core dimensions: helpfulness, honesty, and harmlessness.</p>
+        <p class="fine">Paper and code forthcoming.</p>
+        <ul class="links" aria-label="SPAR project links">
+          <li><a class="pill pill-primary" href="https://sparai.org/projects/f26/reckqc5o81AtSxOFU/" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>SPAR project page</a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="card research-row is-progress" id="world-models">
+      <div class="thumb thumb-placeholder" aria-hidden="true">
+        <span class="art-kicker">In progress</span>
+        <span class="art-title">JEPA-style world models</span>
+      </div>
+      <div class="card-body">
+        <p class="tag-row"><span class="tag tag-status">In progress</span> <span class="tag tag-event">Research collaboration, in progress</span></p>
+        <h3>JEPA-style world models</h3>
+        <p>Researching JEPA-style world models for time-series event forecasting, including how event-probability forecasts should be calibrated when event rates change, and building on KITE.</p>
+        <ul class="links" aria-label="World models research links">
+          <li><a class="pill pill-primary" href="https://arxiv.org/abs/2610.12738" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>KITE paper</a></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section wrap" id="hackathons" aria-labelledby="h-hack">
+  <header class="section-head">
+    <p class="kicker">Hackathons</p>
+    <h2 id="h-hack">Hackathon projects</h2>
+    <p class="section-sub"><strong class="count" id="hack-total">17</strong> projects at <strong class="count" id="hack-events">17</strong> events since <span id="hack-since">August 2025</span>. Newest first. Each card shows the event and its date. <a class="inline-link" href="hackathons/">See the full list with every event, submission, and video link <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </header>
+  <div class="filter-bar" role="group" aria-label="Filter hackathon projects by category" id="filters"></div>
+  <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+  <ul class="grid" id="project-grid" aria-label="Hackathon projects">
+    <li class="grid-fallback">Loading hackathon projects. If this does not load, browse <a href="https://github.com/mso-docs?tab=repositories">all repositories on GitHub</a>.</li>
+  </ul>
+
+  <div class="timeline-wrap" id="timeline">
+    <header class="timeline-head">
+      <h3>Hackathon timeline</h3>
+      <div class="timeline-tools">
+        <span class="timeline-total"><strong id="timeline-total">17</strong> hackathon projects</span>
+        <a class="btn btn-small btn-ghost" data-playlist href="https://www.youtube.com/playlist?list=PLS06olZGZM-M" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg><span>Watch all hackathon videos</span></a>
+        <a class="btn btn-small btn-ghost" href="hackathons/"><span>Open the shareable page</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <button class="btn btn-small btn-ghost" type="button" id="copy-timeline" hidden><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy link to this timeline</span></button>
+      </div>
+    </header>
+    <div id="timeline-body"></div>
+  </div>
+</section>
+
+<section class="section wrap" id="spaces" aria-labelledby="h-spaces">
+  <header class="section-head">
+    <p class="kicker">Hugging Face</p>
+    <h2 id="h-spaces">Other Spaces</h2>
+  </header>
+  <div class="mini-grid">
+    <article class="card mini">
+      <h3>ML Sensei</h3>
+      <p>A chat tutor for machine learning concepts, backed by a LoRA adapter fine-tuned on TinyLlama 1.1B.</p>
+      <ul class="links">
+        <li><a class="pill pill-primary" href="https://huggingface.co/spaces/mackenzietechdocs/ml-sensei-chat" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-hf"/></svg>Space</a></li>
+        <li><a class="pill" href="https://huggingface.co/mackenzietechdocs/ml-sensei-lora-tinyllama-1.1b" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-model"/></svg>Model</a></li>
+        <li><a class="pill" href="https://github.com/mso-docs/ml-sensei-lora" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+      </ul>
+    </article>
+    <article class="card mini">
+      <h3>ICML 2026 reproduction</h3>
+      <p>A logbook for a reproduction of &ldquo;Beyond Text-to-SQL: Can LLMs Really Debug Enterprise ETL SQL?&rdquo;, built for the Reproducing the ICML 2026 Hackathon.</p>
+      <ul class="links">
+        <li><a class="pill pill-primary" href="https://huggingface.co/spaces/mackenzietechdocs/repro-beyond-text-to-sql-can-llms-really-debug-enterprise-etl-sql" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-hf"/></svg>Space</a></li>
+        <li><a class="pill" href="https://github.com/mso-docs/ICML-2026-OpenResearch-Evals" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section wrap" id="earlier" aria-labelledby="h-earlier">
+  <header class="section-head">
+    <p class="kicker">Archive</p>
+    <h2 id="h-earlier">Selected earlier work</h2>
+    <p class="section-sub">Smaller projects outside the hackathon list. Every link here still loads.</p>
+  </header>
+  <ul class="earlier-list">
+    <li class="card earlier"><div><h3>Ollama Web Summarizer</h3><p>A Chrome extension that uses local Ollama to summarize web content and chat about it.</p></div><div class="earlier-foot"><span class="lang">JavaScript</span><span class="earlier-links"><a class="pill" href="https://github.com/mso-docs/Ollama-Web-Summarizer" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></span></div></li>
+    <li class="card earlier"><div><h3>Luckie Runner</h3><p>A browser-based runner game: Luckie Puppie, a barista dog, races to make her shift at Beachside Boba Cafe.</p></div><div class="earlier-foot"><span class="lang">JavaScript</span><span class="earlier-links"><a class="pill" href="https://mso-docs.github.io/Luckie-Runner/" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Play</a><a class="pill" href="https://github.com/mso-docs/Luckie-Runner" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></span></div></li>
+    <li class="card earlier"><div><h3>DesertByte</h3><p>A Commodore Amiga-style JavaScript demo you can play in the browser.</p></div><div class="earlier-foot"><span class="lang">JavaScript</span><span class="earlier-links"><a class="pill" href="https://mso-docs.github.io/DesertByte/" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Play</a><a class="pill" href="https://github.com/mso-docs/DesertByte" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></span></div></li>
+    <li class="card earlier"><div><h3>CCAR-F Study Studio</h3><p>A browser-based spaced repetition and quiz app for the Claude Certified Architect Foundations exam.</p></div><div class="earlier-foot"><span class="lang">Python</span><span class="earlier-links"><a class="pill" href="https://mso-docs.github.io/CCAR-F-Practice/" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Open app</a><a class="pill" href="https://github.com/mso-docs/CCAR-F-Practice" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></span></div></li>
+    <li class="card earlier"><div><h3>Runespeak Lite</h3><p>A small native Linux narrator that runs a 31M-parameter English text-to-speech model locally.</p></div><div class="earlier-foot"><span class="lang">Python</span><span class="earlier-links"><a class="pill" href="https://github.com/mso-docs/runespeak-lite" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></span></div></li>
+    <li class="card earlier"><div><h3>Mackenzie.TechDocs</h3><p>The Mintlify documentation site behind my technical writing practice.</p></div><div class="earlier-foot"><span class="lang">MDX</span><span class="earlier-links"><a class="pill" href="https://mackenzietechdocs.mintlify.app/" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Docs site</a><a class="pill" href="https://github.com/mso-docs/docs" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></span></div></li>
+  </ul>
+</section>
+
+<section class="section wrap about" id="about" aria-labelledby="h-about">
+  <header class="section-head">
+    <p class="kicker">About</p>
+    <h2 id="h-about">About and contact</h2>
+  </header>
+  <div class="about-grid">
+    <div>
+      <p>I&rsquo;m Mackenzie O&rsquo;Brien. I research how language models represent and suppress knowledge, and I study world models (JEPA-style). I also build AI systems, data pipelines, and developer tools at Mac Labs AI.</p>
+      <p>My work centers on LLM evaluation, agent systems, retrieval, the Model Context Protocol, and local models. Everything on this page is public, and the hackathon list updates as I ship.</p>
     </div>
-  </section>
+    <ul class="contact-list">
+      <li><a class="contact" href="https://github.com/mso-docs" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg><span>GitHub<small>mso-docs</small></span></a></li>
+      <li><a class="contact" href="https://huggingface.co/mackenzietechdocs" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-hf"/></svg><span>Hugging Face<small>mackenzietechdocs</small></span></a></li>
+      <li><a class="contact" href="https://www.linkedin.com/in/mackenzieoc" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg><span>LinkedIn<small>mackenzieoc</small></span></a></li>
+      <li><a class="contact" href="https://linktr.ee/mackenzie.techdocs" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-tree"/></svg><span>Linktree<small>mackenzie.techdocs</small></span></a></li>
+    </ul>
+  </div>
+</section>
+</main>
 
-  <!-- PROJECTS -->
-  <section class="projects-section" id="projects">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-tag">Work</span>
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-desc">A selection of tools, extensions, and experiments I've built.</p>
-      </div>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Mackenzie O&rsquo;Brien &middot; Mac Labs AI</p>
+    <ul class="footer-links">
+      <li><a href="https://github.com/mso-docs" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+      <li><a href="https://huggingface.co/mackenzietechdocs" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-hf"/></svg>Hugging Face</a></li>
+      <li><a href="https://www.linkedin.com/in/mackenzieoc" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+      <li><a href="https://linktr.ee/mackenzie.techdocs" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-tree"/></svg>Linktree</a></li>
+    </ul>
+    <p class="fine">Plain HTML, CSS, and JavaScript. No analytics, no cookies, no third-party requests except the links you click. Fonts are self-hosted (SIL OFL 1.1).</p>
+  </div>
+</footer>
 
-      <!-- FILTERS -->
-      <div class="filters" id="filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="ai">AI / LLM</button>
-        <button class="filter-btn" data-filter="tools">Tools</button>
-        <button class="filter-btn" data-filter="data">Data</button>
-        <button class="filter-btn" data-filter="game">Creative</button>
-      </div>
-
-      <!-- PROJECTS GRID -->
-      <div class="projects-grid" id="projects-grid">
-
-        <!-- AI-Research-Camera -->
-        <article class="card featured" data-tags="ai tools" data-index="0">
-          <div class="card-top">
-            <div class="card-icon">📷</div>
-            <span class="card-badge featured-badge">Featured</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="lang-badge lang-ts">TypeScript</span>
-            </div>
-            <h3 class="card-title">AI Research Camera</h3>
-            <p class="card-desc">Point your camera at the world and get a research-grade explanation powered by Gemini Pro. Real-time visual AI in your browser.</p>
-            <ul class="card-tags">
-              <li>Gemini API</li>
-              <li>Computer Vision</li>
-              <li>TypeScript</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/mso-docs/AI-Research-Camera" target="_blank" rel="noopener noreferrer" class="card-link">
-              View on GitHub
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Ollama-Web-Summarizer -->
-        <article class="card featured" data-tags="ai tools" data-index="1">
-          <div class="card-top">
-            <div class="card-icon">🧩</div>
-            <span class="card-badge featured-badge">Featured</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="lang-badge lang-js">JavaScript</span>
-            </div>
-            <h3 class="card-title">Ollama Web Summarizer</h3>
-            <p class="card-desc">Chrome extension that uses a local Ollama instance to summarize any webpage and lets you chat about the content — no cloud required.</p>
-            <ul class="card-tags">
-              <li>Ollama</li>
-              <li>Chrome Extension</li>
-              <li>Local AI</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/mso-docs/Ollama-Web-Summarizer" target="_blank" rel="noopener noreferrer" class="card-link">
-              View on GitHub
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- GameSupport-AI -->
-        <article class="card featured" data-tags="ai tools" data-index="2">
-          <div class="card-top">
-            <div class="card-icon">🎮</div>
-            <span class="card-badge featured-badge">Featured</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="lang-badge lang-py">Python</span>
-            </div>
-            <h3 class="card-title">GameSupport AI</h3>
-            <p class="card-desc">Customer support AI chatbot built for an MMORPG. Handles player queries with context-aware responses tailored to game mechanics.</p>
-            <ul class="card-tags">
-              <li>NLP</li>
-              <li>Chatbot</li>
-              <li>Python</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/mso-docs/GameSupport-AI" target="_blank" rel="noopener noreferrer" class="card-link">
-              View on GitHub
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Docs-Navigator-MCP-SUSE -->
-        <article class="card featured" data-tags="ai tools" data-index="3">
-          <div class="card-top">
-            <div class="card-icon">🗂️</div>
-            <span class="card-badge featured-badge">Featured</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="lang-badge lang-js">JavaScript</span>
-            </div>
-            <h3 class="card-title">Docs Navigator MCP <span class="edition-tag">SUSE Edition</span></h3>
-            <p class="card-desc">AI-assisted documentation explorer powered by MCP. Navigate large doc sets with a conversational assistant interface.</p>
-            <ul class="card-tags">
-              <li>MCP</li>
-              <li>Docs Tooling</li>
-              <li>AI Assistant</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/mso-docs/Docs-Navigator-MCP-SUSE-Edition" target="_blank" rel="noopener noreferrer" class="card-link">
-              View on GitHub
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Docs-Navigator -->
-        <article class="card" data-tags="ai tools" data-index="4">
-          <div class="card-top">
-            <div class="card-icon">🧭</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="lang-badge lang-py">Python</span>
-            </div>
-            <h3 class="card-title">Docs Navigator</h3>
-            <p class="card-desc">MCP server that lets an AI assistant navigate and surface documentation on demand. The Python-native companion to the SUSE edition.</p>
-            <ul class="card-tags">
-              <li>MCP Server</li>
-              <li>Python</li>
-              <li>Docs</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/mso-docs/Docs-Navigator" target="_blank" rel="noopener noreferrer" class="card-link">
-              View on GitHub
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- OpenClaw-Ollama-Docker -->
-        <article class="card featured" data-tags="ai tools" data-index="5">
-          <div class="card-top">
-            <div class="card-icon">🐳</div>
-            <span class="card-badge featured-badge">Featured</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="lang-badge lang-sh">Shell</span>
-            </div>
-            <h3 class="card-title">OpenClaw Ollama Docker</h3>
-            <p class="card-desc">Production-ready Docker configuration for running Ollama alongside OpenClaw locally. Streamlined local AI environment setup.</p>
-            <ul class="card-tags">
-              <li>Docker</li>
-              <li>Ollama</li>
-              <li>Infrastructure</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/mso-docs/OpenClaw-Ollama-Docker" target="_blank" rel="noopener noreferrer" class="card-link">
-              View on GitHub
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- MOD-to-MP3 -->
-        <article class="card" data-tags="tools" data-index="7">
-          <div class="card-top">
-            <div class="card-icon">🎵</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="lang-badge lang-py">Python</span>
-            </div>
-            <h3 class="card-title">MOD to MP3</h3>
-            <p class="card-desc">Batch converter for legacy .mod and .xm tracker music files to MP3. A clean utility for preserving and modernizing retro audio formats.</p>
-            <ul class="card-tags">
-              <li>Audio</li>
-              <li>CLI Tool</li>
-              <li>Python</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/mso-docs/MOD-to-MP3" target="_blank" rel="noopener noreferrer" class="card-link">
-              View on GitHub
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Luckie-Runner -->
-        <article class="card" data-tags="game" data-index="8">
-          <div class="card-top">
-            <div class="card-icon">🏃</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="lang-badge lang-js">JavaScript</span>
-            </div>
-            <h3 class="card-title">Luckie Runner</h3>
-            <p class="card-desc">Browser-based runner game built from scratch in JavaScript. Demonstrates game loop architecture, sprite handling, and interactive front-end work.</p>
-            <ul class="card-tags">
-              <li>Canvas API</li>
-              <li>Game Dev</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/mso-docs/Luckie-Runner" target="_blank" rel="noopener noreferrer" class="card-link">
-              View on GitHub
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- New-Mexico-Tornadoes -->
-        <article class="card" data-tags="data" data-index="9">
-          <div class="card-top">
-            <div class="card-icon">🌪️</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="lang-badge lang-nb">Jupyter</span>
-            </div>
-            <h3 class="card-title">New Mexico Tornadoes</h3>
-            <p class="card-desc">PySpark-powered ETL pipeline and data analysis of tornado events in New Mexico. Covers ingestion, cleaning, and exploratory analysis in a notebook.</p>
-            <ul class="card-tags">
-              <li>PySpark</li>
-              <li>ETL</li>
-              <li>Data Analysis</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/mso-docs/New-Mexico-Tornadoes" target="_blank" rel="noopener noreferrer" class="card-link">
-              View on GitHub
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact-section" id="contact">
-    <div class="section-inner contact-inner">
-      <div class="contact-glow"></div>
-      <span class="section-tag">Get in touch</span>
-      <h2 class="section-title">Let's Work Together</h2>
-      <p class="contact-desc">
-        I'm open to AI/ML roles, developer tooling projects, and interesting contracts.
-        Reach out via GitHub or connect below.
-      </p>
-      <a href="https://github.com/mso-docs" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-        View GitHub Profile
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <span class="footer-copy">© 2026 Mackenzie</span>
-      <a href="https://github.com/mso-docs" target="_blank" rel="noopener noreferrer" class="footer-gh">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-        mso-docs
-      </a>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+<noscript><p class="noscript wrap">JavaScript powers the filterable hackathon grid and the theme switch. The full list is in <a href="data/projects.json">data/projects.json</a> and on <a href="https://github.com/mso-docs?tab=repositories">GitHub</a>.</p></noscript>
+<script src="js/main.js" defer></script>
 </body>
 </html>

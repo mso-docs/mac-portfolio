@@ -1,0 +1,427 @@
+{
+  "_readme": "Add a hackathon by appending an object to \"projects\". Fields: id, name, summary, categories (Research, Agents, Tools, Apps), event, eventType, eventUrl (official event page), submissionUrl (her writeup or submission page), videoUrl (optional; all videos are also in the YouTube playlist set in playlistUrl), date (ISO, sorts the lists), dateLabel (shown), dateBasis, verified, image (optional, under assets/img), links {repo, demo, space, listing}. Leave a URL as an empty string when there isn't one. Set verified to false to hide an entry. The counts on every page are computed from the entries with verified: true.",
+  "playlistUrl": "https://www.youtube.com/playlist?list=PLS06olZGZM-M",
+  "categoriesOrder": [
+    "Research",
+    "Agents",
+    "Tools",
+    "Apps"
+  ],
+  "projects": [
+    {
+      "id": "lexsi",
+      "name": "Unlearning vs. Hiding",
+      "summary": "An audit of RMU unlearning on Tiny Aya (3.35B): does unlearning remove knowledge or just suppress its expression?",
+      "categories": [
+        "Research"
+      ],
+      "event": "Lexsi AI Safety & Alignment Hackathon, Track 2b",
+      "eventType": "Online hackathon",
+      "eventUrl": "https://hackathon.lexsi.ai/",
+      "submissionUrl": "https://github.com/mso-docs/Lexsi-Unlearning",
+      "videoUrl": "https://youtu.be/BuCfLNA-gfc",
+      "date": "2026-11-15",
+      "dateLabel": "Nov 2026",
+      "dateBasis": "submission window closed Nov 16, 2026 at 6:59 AM ET",
+      "verified": true,
+      "image": "assets/img/research-lexsi.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/Lexsi-Unlearning",
+        "demo": "https://mso-docs.github.io/Lexsi-Unlearning/"
+      },
+      "linkNotes": "The submission was the repository (the form submission page is not public)."
+    },
+    {
+      "id": "apart-epistemics",
+      "name": "A Linear Answerability Signal the Model Does Not Act On",
+      "summary": "A probe finds a linear signal for answerability in Phi-3.5-mini that does not reach the model's output.",
+      "categories": [
+        "Research"
+      ],
+      "event": "Apart AI x Epistemics sprint",
+      "eventType": "Research sprint",
+      "eventUrl": "https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15",
+      "submissionUrl": "https://apartresearch.com/sprints/projects/a-linear-answerability-signal-that-the-model-does-not-act-on-feuho1zptz",
+      "videoUrl": "https://youtu.be/og3AKyBByQw",
+      "date": "2026-11-13",
+      "dateLabel": "Nov 13–15, 2026",
+      "dateBasis": "dates from the repository README",
+      "verified": true,
+      "image": "assets/img/research-apart.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/Apart-Epistemics",
+        "demo": "https://mso-docs.github.io/Apart-Epistemics/"
+      }
+    },
+    {
+      "id": "contagion",
+      "name": "Contagion",
+      "summary": "Tests what happens when an unauthorized instruction enters a network of AI agents, using isolated contexts and a bounded simulation controller.",
+      "categories": [
+        "Research",
+        "Agents"
+      ],
+      "event": "Swarm Alignment Hackathon",
+      "eventType": "Research sprint",
+      "eventUrl": "https://apartresearch.com/sprints/swarm-alignment-2026",
+      "submissionUrl": "https://apartresearch.com/sprints/projects/contagion-testing-how-unsafe-instructions-spread-through-ai-agent-networks-3hzoqflrcr",
+      "videoUrl": "https://youtu.be/7FGDfEq0ucE",
+      "date": "2026-11-06",
+      "dateLabel": "Nov 6–8, 2026",
+      "dateBasis": "dates from the repository README",
+      "verified": true,
+      "image": "assets/img/p-contagion.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/contagion-swarm-alignment",
+        "demo": "https://mso-docs.github.io/contagion-swarm-alignment/"
+      }
+    },
+    {
+      "id": "masklab",
+      "name": "MaskLab",
+      "summary": "A local research workbench that measures how model answers change under independent persona and stated-belief conditions.",
+      "categories": [
+        "Research"
+      ],
+      "event": "Nebius x NVIDIA Global AI Hackathon",
+      "eventType": "Devpost hackathon",
+      "eventUrl": "https://nebiusglobalaihackathon.devpost.com/",
+      "submissionUrl": "https://devpost.com/software/masklab",
+      "videoUrl": "https://youtu.be/gmgJFIZNrYs",
+      "date": "2026-10-30",
+      "dateLabel": "Oct 2026",
+      "dateBasis": "repository commits Oct 28 to 30, 2026; submissions closed Oct 30, 2026",
+      "verified": true,
+      "image": "assets/img/p-masklab.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/MaskLab",
+        "demo": "https://mso-docs.github.io/MaskLab/"
+      }
+    },
+    {
+      "id": "ghosttrace",
+      "name": "GhostTrace",
+      "summary": "A local-first workbench for controlled prompt-condition comparisons, with residual-stream captures and replayable recorded evidence.",
+      "categories": [
+        "Research"
+      ],
+      "event": "DEV Hacktoberfest Week 4",
+      "eventType": "DEV challenge",
+      "eventUrl": "https://dev.to/challenges/hf26",
+      "submissionUrl": "https://dev.to/mackenzie-techdocs/ghosttrace-a-local-workbench-for-looking-inside-language-models-45p",
+      "videoUrl": "https://youtu.be/LstfH2Er_eI",
+      "date": "2026-10-28",
+      "dateLabel": "Oct 2026",
+      "dateBasis": "DEV write-up published Oct 28, 2026",
+      "verified": true,
+      "links": {
+        "repo": "https://github.com/mso-docs/GhostTrace"
+      }
+    },
+    {
+      "id": "slothlab",
+      "name": "SlothLab + LazyLoop",
+      "summary": "Local scientific research with a reason to stop: turns a question into falsifiable hypotheses and measured evidence, and halts when a declared target is reached.",
+      "categories": [
+        "Research",
+        "Agents"
+      ],
+      "event": "DEV Hacktoberfest Week 3",
+      "eventType": "DEV challenge",
+      "eventUrl": "https://dev.to/challenges/hf26",
+      "submissionUrl": "https://dev.to/mackenzie-techdocs/slothlab-hacktoberfest-week-3-challenge-11ao",
+      "videoUrl": "https://youtu.be/UV3h4IRk3go",
+      "date": "2026-10-26",
+      "dateLabel": "Oct 2026",
+      "dateBasis": "DEV write-up published Oct 26, 2026",
+      "verified": true,
+      "image": "assets/img/p-lazylab.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/LazyLab",
+        "demo": "https://mso-docs.github.io/LazyLab/"
+      }
+    },
+    {
+      "id": "hypothesis-lab",
+      "name": "Hypothesis Lab",
+      "summary": "A local scientific research IDE built with Python and Marimo that links a research question to real publications, reviewable evidence, and explicit Bayesian models.",
+      "categories": [
+        "Research",
+        "Tools"
+      ],
+      "event": "OSI Hackathon 2026",
+      "eventType": "Online hackathon",
+      "eventUrl": "https://scientificintelligence.org/campaigns/osi-hackathon-2026",
+      "submissionUrl": "https://scientificintelligence.org/campaigns/osi-hackathon-2026/submissions/168",
+      "videoUrl": "https://youtu.be/Hx3EiLiQf28",
+      "date": "2026-10-21",
+      "dateLabel": "Oct 21–22, 2026",
+      "dateBasis": "dates from the repository description",
+      "verified": true,
+      "image": "assets/img/p-hypothesis-lab.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/Hypothesis-Lab",
+        "demo": "https://mso-docs.github.io/Hypothesis-Lab/"
+      }
+    },
+    {
+      "id": "researchready",
+      "name": "ResearchReady",
+      "summary": "A local-first manuscript audit workspace that checks LaTeX structure, citations, and references, with optional open-model review and source-linked findings.",
+      "categories": [
+        "Tools",
+        "Agents"
+      ],
+      "event": "DEV Hacktoberfest Week 2: Side Hustle AI Challenge",
+      "eventType": "DEV challenge",
+      "eventUrl": "https://dev.to/challenges/hf26",
+      "submissionUrl": "https://dev.to/mackenzie-techdocs/reasearchready-side-hustle-ai-challenge-week-2-532",
+      "videoUrl": "https://youtu.be/pLVhiMqGErg",
+      "date": "2026-10-19",
+      "dateLabel": "Oct 2026",
+      "dateBasis": "DEV write-up published Oct 19, 2026",
+      "verified": true,
+      "image": "assets/img/p-researchready.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/ResearchReady",
+        "demo": "https://mso-docs.github.io/ResearchReady/"
+      }
+    },
+    {
+      "id": "outfit",
+      "name": "OutFit",
+      "summary": "A local fitness-planning prototype: accept a seven-day plan, log activity and recovery, and review an adjustment. A validated fallback works without a model.",
+      "categories": [
+        "Apps"
+      ],
+      "event": "DEV Hacktoberfest Week 1: Touch Grass",
+      "eventType": "DEV challenge",
+      "eventUrl": "https://dev.to/challenges/hf26",
+      "submissionUrl": "https://dev.to/mackenzie-techdocs/outfit-a-little-movement-a-little-more-outside-den",
+      "videoUrl": "https://youtu.be/HlDxsYxbqtw",
+      "date": "2026-10-12",
+      "dateLabel": "Oct 2026",
+      "dateBasis": "DEV write-up published Oct 12, 2026",
+      "verified": true,
+      "image": "assets/img/p-outfit.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/OutFit-Fitness-Trainer",
+        "demo": "https://mso-docs.github.io/OutFit-Fitness-Trainer/"
+      }
+    },
+    {
+      "id": "call-mac",
+      "name": "Call Mac",
+      "summary": "Local AI tech support for the people who usually call you. It remembers devices and past fixes, offers one step at a time, and keeps data on your computer.",
+      "categories": [
+        "Apps",
+        "Agents"
+      ],
+      "event": "DEV Hacktoberfest: Build for a Friend",
+      "eventType": "DEV challenge",
+      "eventUrl": "https://dev.to/challenges/hf26",
+      "submissionUrl": "https://dev.to/mackenzie-techdocs/call-mac-patient-ai-tech-support-for-my-mom-2ccm",
+      "videoUrl": "https://youtu.be/4DAJSamZxpw",
+      "date": "2026-10-05",
+      "dateLabel": "Oct 2026",
+      "dateBasis": "DEV write-up published Oct 5, 2026",
+      "verified": true,
+      "image": "assets/img/p-callmac.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/Call-Mac",
+        "demo": "https://mso-docs.github.io/Call-Mac/"
+      }
+    },
+    {
+      "id": "paper-scout",
+      "name": "Paper Scout",
+      "summary": "A browser-based research companion: ask questions grounded in the paper you are reading, or investigate a highlighted claim against the wider literature. Team project.",
+      "categories": [
+        "Tools",
+        "Agents"
+      ],
+      "event": "AI Tinkerers Atlanta: Agents, Everywhere global hackathon",
+      "eventType": "Community hackathon",
+      "eventUrl": "https://atlanta.aitinkerers.org/hackathons/h_pS99rSfunCc",
+      "submissionUrl": "https://atlanta.aitinkerers.org/hackathons/h_pS99rSfunCc/entries/ht_2Jg-9I5IifE",
+      "videoUrl": "https://www.youtube.com/watch?v=6dA8gCW3Khk",
+      "date": "2026-09-12",
+      "dateLabel": "Sep 12, 2026",
+      "dateBasis": "repository created Sep 12, 2026, which matches the event date",
+      "verified": true,
+      "links": {
+        "repo": "https://github.com/mso-docs/paper-scout"
+      },
+      "linkNotes": "Submission entry matched by project name and README text (listed as Project Helix: Paper Scout, repo mso-docs/paper-scout)."
+    },
+    {
+      "id": "weather-model-fight-club",
+      "name": "Weather Model Fight Club",
+      "summary": "Compares three global weather models over three days and shows where they agree, where they diverge, and which is closest to consensus.",
+      "categories": [
+        "Apps"
+      ],
+      "event": "Kane CLI Hackathon (Aug 2026)",
+      "eventType": "Online hackathon",
+      "eventUrl": "https://luma.com/kanecli-online",
+      "submissionUrl": "",
+      "videoUrl": "https://youtu.be/utCLIjNICDw",
+      "date": "2026-08-19",
+      "dateLabel": "Aug 19–31, 2026",
+      "dateBasis": "event dates from the Luma sign-up page (Aug 19 to Aug 31, 2026); repository commits dated Aug 21, 2026",
+      "verified": true,
+      "image": "assets/img/p-kane.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/Kane-CLI-Hackathon-2026",
+        "demo": "https://kane-cli-hackathon-2026.vercel.app/"
+      },
+      "linkNotes": "eventUrl is the Luma sign-up page for the August 2026 Kane CLI event. No separate submission page was found, so submissionUrl is blank."
+    },
+    {
+      "id": "icml-squirrel-repro",
+      "name": "Squirrel Benchmark reproduction",
+      "summary": "A reproduction of an ICML 2026 paper on debugging enterprise ETL SQL, using a downscaled 62-example Mini-Squirrel benchmark and local models.",
+      "categories": [
+        "Research"
+      ],
+      "event": "Reproducing the ICML 2026 Hackathon",
+      "eventType": "Reproduction hackathon",
+      "eventUrl": "https://huggingface.co/ICML-2026-agent-repro",
+      "submissionUrl": "https://huggingface.co/spaces/mackenzietechdocs/repro-beyond-text-to-sql-can-llms-really-debug-enterprise-etl-sql",
+      "videoUrl": "",
+      "date": "2026-08-02",
+      "dateLabel": "Aug 2026",
+      "dateBasis": "repository and Space created Aug 2, 2026",
+      "verified": true,
+      "image": "assets/img/p-icml.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/ICML-2026-OpenResearch-Evals",
+        "space": "https://huggingface.co/spaces/mackenzietechdocs/repro-beyond-text-to-sql-can-llms-really-debug-enterprise-etl-sql"
+      },
+      "linkNotes": "The logbook Space is the submission, per the challenge rules."
+    },
+    {
+      "id": "ai-research-camera",
+      "name": "AI Research Camera",
+      "summary": "Point your camera at the world and get a research-grade explanation, with modes for different audiences, powered by Gemini 3 Pro. Built in Google AI Studio, then moved to GitHub.",
+      "categories": [
+        "Apps"
+      ],
+      "event": "Kaggle: Vibe Code with Gemini 3 Pro in AI Studio",
+      "eventType": "Kaggle hackathon",
+      "eventUrl": "https://www.kaggle.com/competitions/gemini-3",
+      "submissionUrl": "https://www.kaggle.com/competitions/gemini-3/writeups/ai-research-camera#3370621",
+      "videoUrl": "https://youtu.be/FjQ0ON-8j_k",
+      "date": "2025-12-11",
+      "dateLabel": "Dec 2025",
+      "dateBasis": "repository created Dec 11, 2025; event ran Dec 5 to Dec 12, 2025; Kaggle entry confirmed by the author",
+      "verified": true,
+      "links": {
+        "repo": "https://github.com/mso-docs/AI-Research-Camera"
+      }
+    },
+    {
+      "id": "suse-docs-navigator",
+      "name": "Docs Navigator MCP: SUSE Edition",
+      "summary": "An MCP server that searches, summarizes, and answers questions over SUSE, Rancher, K3s, and RKE2 documentation with open-source models.",
+      "categories": [
+        "Tools",
+        "Agents"
+      ],
+      "event": "SUSE Hack Week 25",
+      "eventType": "Company hack week",
+      "eventUrl": "https://hackweek.opensuse.org/25/",
+      "submissionUrl": "https://hackweek.opensuse.org/25/projects/docs-navigator-mcp-suse-edition",
+      "videoUrl": "",
+      "date": "2025-12-01",
+      "dateLabel": "Dec 1–5, 2025",
+      "dateBasis": "event dates",
+      "verified": true,
+      "flagship": true,
+      "image": "assets/img/flagship-suse.jpg",
+      "links": {
+        "repo": "https://github.com/mso-docs/Docs-Navigator-MCP-SUSE-Edition",
+        "demo": "https://mso-docs.github.io/Docs-Navigator-MCP-SUSE-Edition/",
+        "listing": "https://glama.ai/mcp/servers/mso-docs/Docs-Navigator-MCP-SUSE-Edition"
+      },
+      "linkNotes": "Event and project pages return a bot check (403) to curl but open in a browser."
+    },
+    {
+      "id": "healixpath",
+      "name": "HealixPath",
+      "summary": "An MCP server and web app that turns a product idea and a persona into structured user stories, experience tales, feature-impact stories, and journey maps. Co-authored with DevRubenArevalo; the live copy runs on free open models through Hugging Face sign-in.",
+      "categories": [
+        "Apps",
+        "Agents"
+      ],
+      "event": "Hugging Face MCP 1st Birthday Hackathon",
+      "eventType": "Online hackathon",
+      "eventUrl": "https://huggingface.co/MCP-1st-Birthday",
+      "submissionUrl": "https://huggingface.co/spaces/MCP-1st-Birthday/TeamHealix",
+      "videoUrl": "https://youtu.be/zz5AliukXKk",
+      "date": "2025-11-30",
+      "dateLabel": "Nov 2025",
+      "dateBasis": "submitted to the hackathon in November 2025; the exact day is not recorded here, so the sort date is the end of the month",
+      "verified": true,
+      "links": {
+        "repo": "https://github.com/mso-docs/HealixPath",
+        "space": "https://huggingface.co/spaces/mackenzietechdocs/HealixPath"
+      },
+      "linkNotes": "The official submission is the TeamHealix Space in the MCP-1st-Birthday organization (kept unchanged). The live Space is the maintained copy. Co-author: DevRubenArevalo (https://huggingface.co/DevRubenArevalo, https://github.com/DevRubenArevalo).",
+      "coAuthors": [
+        {
+          "name": "DevRubenArevalo",
+          "huggingface": "https://huggingface.co/DevRubenArevalo",
+          "github": "https://github.com/DevRubenArevalo"
+        }
+      ]
+    },
+    {
+      "id": "runespeak",
+      "name": "RuneSpeak",
+      "summary": "A simple text-to-speech reader that reads any text file out loud, with pause, resume, and stop.",
+      "categories": [
+        "Apps"
+      ],
+      "event": "For the Love of Code 2025",
+      "eventType": "GitHub hackathon",
+      "eventUrl": "https://github.blog/open-source/for-the-love-of-code-2025/",
+      "submissionUrl": "https://github.com/mso-docs/runespeak",
+      "videoUrl": "",
+      "date": "2025-08-06",
+      "dateLabel": "Aug 2025",
+      "dateBasis": "repository created Aug 6, 2025; event ran Jul 16 to Sep 22, 2025",
+      "verified": true,
+      "links": {
+        "repo": "https://github.com/mso-docs/runespeak"
+      },
+      "linkNotes": "The submission was the repository."
+    }
+  ],
+  "reviewedAndExcluded": [
+    {
+      "name": "claude-code-camp-2026-Q2",
+      "reason": "Claude Code Camp is a course or camp, not a hackathon. Not included."
+    },
+    {
+      "name": "wth-write-a-thon",
+      "reason": "A fork of WriteTech Hub's community writing challenge. Not a project of hers. Not included."
+    },
+    {
+      "name": "write-tech-accelerator-portfolio-mackenzie",
+      "reason": "WriteTech Hub accelerator program portfolio, not a hackathon. Not included."
+    },
+    {
+      "name": "runespeak-lite, CCAR-F-Practice, DesertByte, Luckie-Runner, number-maze, ml-sensei-lora",
+      "reason": "No hackathon mentioned in the README, description, or topics. Not included."
+    },
+    {
+      "name": "SPAR",
+      "reason": "Not found as a public repo or Space. Not included."
+    },
+    {
+      "name": "DocsNavigator MCP",
+      "reason": "Not a hackathon entry. It is Mackenzie's own project, built to navigate documentation, and the basis for the SUSE Hack Week 25 edition. Shown as a flagship only."
+    }
+  ]
+}
