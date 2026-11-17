@@ -33,7 +33,7 @@
     },
     {
       "id": "apart-epistemics",
-      "name": "A Linear Answerability Signal the Model Does Not Act On",
+      "name": "A Linear Answerability Signal That the Model Does Not Act On",
       "summary": "A probe finds a linear signal for answerability in Phi-3.5-mini that does not reach the model's output.",
       "categories": [
         "Research"
