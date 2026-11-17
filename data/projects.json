@@ -342,7 +342,8 @@
       "links": {
         "repo": "https://github.com/mso-docs/Docs-Navigator-MCP-SUSE-Edition",
         "demo": "https://mso-docs.github.io/Docs-Navigator-MCP-SUSE-Edition/",
-        "listing": "https://glama.ai/mcp/servers/mso-docs/Docs-Navigator-MCP-SUSE-Edition"
+        "listing": "https://glama.ai/mcp/servers/mso-docs/Docs-Navigator-MCP-SUSE-Edition",
+        "space": "https://huggingface.co/spaces/mackenzietechdocs/DocsNavigatorMCP-SUSE"
       },
       "linkNotes": "Event and project pages return a bot check (403) to curl but open in a browser."
     },
@@ -365,9 +366,11 @@
       "verified": true,
       "links": {
         "repo": "https://github.com/mso-docs/HealixPath",
-        "space": "https://huggingface.co/spaces/mackenzietechdocs/HealixPath"
+        "space": "https://huggingface.co/spaces/mackenzietechdocs/HealixPath",
+        "demo": "https://mso-docs.github.io/HealixPath/",
+        "listing": "https://huggingface.co/collections/mackenzietechdocs/healixpath"
       },
-      "linkNotes": "The official submission is the TeamHealix Space in the MCP-1st-Birthday organization (kept unchanged). The live Space is the maintained copy. Co-author: DevRubenArevalo (https://huggingface.co/DevRubenArevalo, https://github.com/DevRubenArevalo).",
+      "linkNotes": "The project page is the GitHub Pages site. The official submission is the TeamHealix Space in the MCP-1st-Birthday organization (kept unchanged). The live Space is the maintained copy. Co-author: DevRubenArevalo (https://huggingface.co/DevRubenArevalo, https://github.com/DevRubenArevalo).",
       "coAuthors": [
         {
           "name": "DevRubenArevalo",
